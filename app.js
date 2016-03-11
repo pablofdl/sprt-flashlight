@@ -26,3 +26,10 @@ fbutil.auth(conf.FB_URL, conf.FB_TOKEN).done(function() {
    PathMonitor.process(esc, conf.FB_URL, conf.paths, conf.FB_PATH);
    SearchQueue.init(esc, conf.FB_URL, conf.FB_REQ, conf.FB_RES, conf.CLEANUP_INTERVAL);
 });
+
+var server_port = process.env.OPENSHIFT_NODEJS_PORT || 8080
+var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'
+
+server.listen(server_port, server_ip_address, function () {
+  console.log( "Listening on " + server_ip_address + ", server_port " + port )
+});
