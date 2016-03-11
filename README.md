@@ -41,7 +41,7 @@ More on Queries
 The full ElasticSearch API is supported. For example, you can control the number of matches (defaults to 10) and initial offset for paginating search results:
 
 ```
-queryObj : { "from" : 0, "size" : 50 , "query": queryObj }; 
+queryObj : { "from" : 0, "size" : 50 , "query": queryObj };
 ```
 
 Check out [this great tutorial](http://okfnlabs.org/blog/2013/07/01/elasticsearch-query-tutorial.html) on querying ElasticSearch. And be sure to read the [ElasticSearch API Reference](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/).
@@ -59,22 +59,3 @@ Deploy to Heroku
  - `git commit -m "configure bonsai"`
  - `git push heroku master` (deploy to heroku)
  - `heroku ps:scale worker=1` (start dyno worker)
-
-### Setup Initial Index with Bonsai
-
-After you've deployed to Heroku, you need to create your initial index name to prevent IndexMissingException error from Bonsai. Create an index called "firebase" via curl using the BONSAI_URL that you copied during Heroku deployment.
-
- - `curl -X POST <BONSAI_URL>/firebase` (ex: https://user:pass@yourbonsai.bonsai.io/firebase)
-
-Support
-=======
-
-Submit questions or bugs using the [issue tracker](https://github.com/firebase/flashlight).
-
-For Firebase-releated questions, try the [mailing list](https://groups.google.com/forum/#!forum/firebase-talk).
-
-License
-=======
-
-[MIT LICENSE](http://firebase.mit-license.org/)
-Copyright © 2013 Firebase <opensource@firebase.com>

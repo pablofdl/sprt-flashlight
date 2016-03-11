@@ -1,14 +1,17 @@
 {
-  "name": "Flashlight",
+  "name": "Flashlight for sportmate",
   "version": "0.1.0",
-  "description": "A search utility for Firebase",
-  "homepage": "https://github.com/firebase/flashlight",
+  "description": "A search utility for Firebase at Sportmate",
+  "homepage": "https://github.com/pablofdl/sprt-flashlight",
   "author": {
-    "name": "Michael \"Kato\" Wulf",
-    "email": "katowulf@gmail.com"
+    "name": "Pablo",
+    "email": "pablo@sportmate.io"
   },
   "engines": {
     "node": "0.10.x"
+  },
+  "scripts": {
+    "start": "node app.js"
   },
   "main": "app.js",
   "devDependencies": {},
